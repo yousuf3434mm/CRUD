@@ -1,12 +1,15 @@
+
+import { AiOutlineHome } from "react-icons/ai";
 import Link from 'next/link'
 import React from 'react'
+import { FiPlusCircle } from "react-icons/fi";
 
 const Navbar = () => {
   return (
-    <nav className='flex rounded-md justify-between items-center p-4 bg-purple-800 text-white'>
-      <Link href={"/"}>YCoding</Link>
-        <Link href={"/addtopic"} className=' rounded-md bg-white text-gray-800 py-2 px-4'> Add Topic</Link>
-    </nav>
+    <div className="flex items-center justify-between gap-4 bg-gray-800 text-white p-4">
+          <Link href={"/"} className="flex items-center justify-center gap-1"> <AiOutlineHome /> <span>Home</span></Link>
+          <Link href={"/create"} className="flex items-center justify-center gap-1"> <FiPlusCircle /> <span>Create</span></Link>
+    </div>
   )
 }
 
